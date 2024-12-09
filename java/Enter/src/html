@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management - LMS</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Online Learning Management System</h1>
+        </header>
+
+        <main>
+            <!-- Navigation -->
+            <nav>
+                <button id="add-user-btn">Add User</button>
+                <button id="list-users-btn">List All Users</button>
+            </nav>
+
+            <!-- Add User Form -->
+            <section id="add-user-section" class="hidden">
+                <h2>Add User</h2>
+                <form id="add-user-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter email" required>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter password" required>
+
+                    <label for="role">Role:</label>
+                    <select id="role" name="role" required>
+                        <option value="">Select a role</option>
+                        <option value="STUDENT">Student</option>
+                        <option value="TEACHER">Teacher</option>
+                        <option value="ADMIN">Admin</option>
+                    </select>
+
+                    <button type="submit">Add User</button>
+                </form>
+                <p id="add-user-message" class="message"></p>
+            </section>
+
+            <!-- List Users -->
+            <section id="list-users-section" class="hidden">
+                <h2>List of Users</h2>
+                <div id="users-list">
+                    <!-- Users will be dynamically inserted here -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Online Learning Management System</p>
+        </footer>
+    </div>
+</body>
+</html>
